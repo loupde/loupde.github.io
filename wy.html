@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 媒体查询方式二：使用media属性 -->
+  <link rel="stylesheet" media="screen and (max-width: 800px)" href="./css/body_bgc.css">
+  <style>
+    /* 媒体查询方式一 使用@import */
+    /* @import url(./css/body.css) (max-width: 500px); */
+  </style>
+
+  <script>
+    // 媒体查询方式三：使用matchMedia函数
+    var mediaQueryList = window.matchMedia("(max-width: 600px)");
+    mediaQueryList.addEventListener("change", function(a, b){
+      if (a.matches) {
+        document.body.style.backgroundColor = '#ccc';
+      } else {
+        document.body.style.backgroundColor = 'transparent';
+      }
+    })
+
+    
+  </script>
+</head>
+<body>
+  <h3>参考</h3>
+  <img src="https://pic2.ziyuan.wang/user/loup/2024/06/翰粼天辰_6ed3927db764a.jpg" alt="翰粼天辰.jpg" title="翰粼天辰.jpg" style="max-width: 100%; height: auto;"/>
+  <hr>
+  <img src="https://pic2.ziyuan.wang/user/loup/2024/06/龙湖九里_97f8f0c78bcb9.jpg" alt="龙湖九里.jpg" title="龙湖九里.jpg" style="max-width: 100%; height: auto;"/>
+  <hr>
+  <img src="https://pic2.ziyuan.wang/user/loup/2024/06/龙湖江与城二期.pic_f87c6e09d6dde.jpg" alt="龙湖江与城二期.pic.jpg" title="龙湖江与城二期.pic.jpg" style="max-width: 100%; height: auto;"/>
+  <hr>
+  <img src="https://pic2.ziyuan.wang/user/loup/2024/06/金科集美阳光_acfcf13b886eb.jpg" alt="金科集美阳光.jpg" title="金科集美阳光.jpg" style="max-width: 100%; height: auto;"/>
+</body>
+</html>
